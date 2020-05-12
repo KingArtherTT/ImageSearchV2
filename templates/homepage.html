@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>展示页面</title>
+    <!-- Bootstrap -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1>演示页面</h1>
+        <p class="lead">
+            请点击视频开始播放，视频已提前经过了检测处理；
+            视频每隔40帧会与商品库进行一次匹配，最终匹配结果会采取投票模型的形式得出。
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-md-1">
+            <button type="button" id="refresh" class="btn btn-info">切换匹配视频</button>
+        </div>
+    </div>
+    <div class="row" style="max-height: 1000px">
+        <div id='video' src="000006" class="col-md-6" style="height: 960px">
+            <iframe src="http://open.iqiyi.com/developer/player_js/coopPlayerIndex.html?vid=98335dd0228c4293d08f47beb85f644a&tvId=16035785900&accessToken=2.f22860a2479ad60d8da7697274de9346&appKey=3955c3425820435e86d0f4cdfe56f5e7&appId=1368&height=100%&width=100%"
+                    frameborder="0" allowfullscreen="true" width="100%" height="100%"></iframe>
+
+        </div>
+        <div id="single_result_list" class="col-md-6 pre-scrollable" style="max-height: 960px">
+            <div class="row modal-header">
+                <h3>单帧匹配结果展示(每隔40帧匹配一次)</h3>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <h3>最终匹配结果展示</h3>
+    <div id="final_result" class="row" >
+        <a href="javascript:void(0);" class="thumbnail">
+                <img src="" alt="">
+                <div class="caption">
+
+                </div>
+        </a>
+    </div>
+</div>
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="/static/jquery-3.4.1.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/start.js"></script>
+</body>
+</html>
